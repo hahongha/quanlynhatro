@@ -1,0 +1,209 @@
+[
+  {
+    "id": "U001",
+    "fullName": "Nguyễn Văn A",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0901123456",
+    "dob": "1995-05-15",
+    "identification": "123456789",
+    "placeOfOrigin": "Hà Nội",
+    "address": "123 Đường Láng, Hà Nội",
+    "familyPhone": "0987654321",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar1.jpg",
+      "email": "nguyenvana@example.com",
+      "status": "ACTIVE",
+      "userName": "nguyenvana",
+      "userId": "U001",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U002",
+    "fullName": "Trần Thị B",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0912345678",
+    "dob": "1997-08-22",
+    "identification": "987654321",
+    "placeOfOrigin": "Hải Phòng",
+    "address": "45 Lê Hồng Phong, Hải Phòng",
+    "familyPhone": "0978123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar2.jpg",
+      "email": "tranthib@example.com",
+      "status": "ACTIVE",
+      "userName": "tranthib",
+      "userId": "U002",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U003",
+    "fullName": "Lê Văn C",
+    "gender": "MALE",
+    "status": "INACTIVE",
+    "phone": "0923456789",
+    "dob": "1998-11-10",
+    "identification": "456123789",
+    "placeOfOrigin": "Đà Nẵng",
+    "address": "67 Trần Phú, Đà Nẵng",
+    "familyPhone": "0967123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar3.jpg",
+      "email": "levanc@example.com",
+      "status": "INACTIVE",
+      "userName": "levanc",
+      "userId": "U003",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U004",
+    "fullName": "Phạm Thị D",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0934567890",
+    "dob": "1996-06-30",
+    "identification": "789456123",
+    "placeOfOrigin": "Hồ Chí Minh",
+    "address": "89 Nguyễn Huệ, Hồ Chí Minh",
+    "familyPhone": "0956123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar4.jpg",
+      "email": "phamthid@example.com",
+      "status": "ACTIVE",
+      "userName": "phamthid",
+      "userId": "U004",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U005",
+    "fullName": "Đỗ Văn E",
+    "gender": "MALE",
+    "status": "INACTIVE",
+    "phone": "0945678901",
+    "dob": "1994-09-18",
+    "identification": "852369741",
+    "placeOfOrigin": "Cần Thơ",
+    "address": "12 Lê Lợi, Cần Thơ",
+    "familyPhone": "0945123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar5.jpg",
+      "email": "dovane@example.com",
+      "status": "INACTIVE",
+      "userName": "dovane",
+      "userId": "U005",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U006",
+    "fullName": "Hoàng Thị F",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0956789012",
+    "dob": "1993-04-25",
+    "identification": "963852741",
+    "placeOfOrigin": "Huế",
+    "address": "34 Trường Tiền, Huế",
+    "familyPhone": "0934123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar6.jpg",
+      "email": "hoangthif@example.com",
+      "status": "ACTIVE",
+      "userName": "hoangthif",
+      "userId": "U006",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U007",
+    "fullName": "Ngô Văn G",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0967890123",
+    "dob": "1992-07-14",
+    "identification": "741258963",
+    "placeOfOrigin": "Bắc Ninh",
+    "address": "78 Quốc Lộ 1A, Bắc Ninh",
+    "familyPhone": "0923123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar7.jpg",
+      "email": "ngovang@example.com",
+      "status": "ACTIVE",
+      "userName": "ngovang",
+      "userId": "U007",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U008",
+    "fullName": "Bùi Thị H",
+    "gender": "FEMALE",
+    "status": "INACTIVE",
+    "phone": "0978901234",
+    "dob": "1999-12-05",
+    "identification": "159753486",
+    "placeOfOrigin": "Nghệ An",
+    "address": "56 Nguyễn Trãi, Nghệ An",
+    "familyPhone": "0912123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar8.jpg",
+      "email": "buithih@example.com",
+      "status": "INACTIVE",
+      "userName": "buithih",
+      "userId": "U008",
+      "role": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": "U009",
+    "fullName": "Lý Văn I",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0989012345",
+    "dob": "2000-02-20",
+    "identification": "357159486",
+    "placeOfOrigin": "Quảng Bình",
+    "address": "67 Hùng Vương, Quảng Bình",
+    "familyPhone": "0901123456",
+    "isRegister": true,
+    "user": {
+      "imageUrl": "https://example.com/avatar9.jpg",
+      "email": "lyvani@example.com",
+      "status": "ACTIVE",
+      "userName": "lyvani",
+      "userId": "U009",
+      "role": {
+        "id": 3
+      }
+    }
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "serviceName": "Tiền điện",
+    "status": "Hoạt động",
+    "value": 3500,
+    "isDefault": true,
+    "createAt": "admin"
+  },
+  {
+    "id": 2,
+    "serviceName": "Tiền nước",
+    "status": "Hoạt động",
+    "value": 15000,
+    "isDefault": true,
+    "createAt": "admin"
+  },
+  {
+    "id": 3,
+    "serviceName": "Internet",
+    "status": "Hoạt động",
+    "value": 100000,
+    "isDefault": true,
+    "createAt": "admin"
+  },
+  {
+    "id": 4,
+    "serviceName": "Gửi xe máy",
+    "status": "Hoạt động",
+    "value": 100000,
+    "isDefault": false,
+    "createAt": "admin"
+  },
+  {
+    "id": 5,
+    "serviceName": "Vệ sinh chung",
+    "status": "Hoạt động",
+    "value": 20000,
+    "isDefault": true,
+    "createAt": "admin"
+  },
+  {
+    "id": 6,
+    "serviceName": "Dịch vụ giặt ủi",
+    "status": "Ngừng cung cấp",
+    "value": 50000,
+    "isDefault": false,
+    "createAt": "admin"
+  },
+  {
+    "id": 7,
+    "serviceName": "Bảo trì sửa chữa",
+    "status": "Hoạt động",
+    "value": 50000,
+    "isDefault": false,
+    "createAt": "admin"
+  },
+  {
+    "id": 8,
+    "serviceName": "Truyền hình cáp",
+    "status": "Tạm dừng",
+    "value": 50000,
+    "isDefault": false,
+    "createAt": "admin"
+  },
+  {
+    "id": 9,
+    "serviceName": "Nước uống đóng bình",
+    "status": "Hoạt động",
+    "value": 30000,
+    "isDefault": false,
+    "createAt": "admin"
+  },
+  {
+    "id": 10,
+    "serviceName": "Dọn dẹp phòng",
+    "status": "Hoạt động",
+    "value": 50000,
+    "isDefault": false,
+    "createAt": "admin"
+  }
+]

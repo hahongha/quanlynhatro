@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 1",
+    "gender": "Male",
+    "status": "NOTACTIVE",
+    "phone": "0436643043",
+    "dob": "2003-03-03",
+    "placeOfOrigin": "City 9",
+    "address": "Street 60, City 2",
+    "familyPhone": "0491308210",
+    "isRegister": true,
+    "identification": "440910112",
+    "rentalRelationship": "Ng\u01b0\u1eddi thu\u00ea ch\u00ednh - Ng\u01b0\u1eddi thu\u00ea ph\u1ee5",
+    "contractResponseDTO": {
+      "id": "CNT010"
+    }
+  },
+  {
+    "id": 2,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 2",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0608906358",
+    "dob": "1993-07-03",
+    "placeOfOrigin": "City 3",
+    "address": "Street 83, City 9",
+    "familyPhone": "0610426407",
+    "isRegister": true,
+    "identification": "468195300",
+    "rentalRelationship": "Ng\u01b0\u1eddi y\u00eau",
+    "contractResponseDTO": {
+      "id": "CNT003"
+    }
+  },
+  {
+    "id": 3,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 3",
+    "gender": "Male",
+    "status": "NOTACTIVE",
+    "phone": "0442283504",
+    "dob": "2004-01-17",
+    "placeOfOrigin": "City 4",
+    "address": "Street 14, City 7",
+    "familyPhone": "0859760025",
+    "isRegister": true,
+    "identification": "439574172",
+    "rentalRelationship": "\u0110\u1ed3ng nghi\u1ec7p",
+    "contractResponseDTO": {
+      "id": "CNT002"
+    }
+  },
+  {
+    "id": 4,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 4",
+    "gender": "Female",
+    "status": "NOTACTIVE",
+    "phone": "0377386318",
+    "dob": "1994-06-24",
+    "placeOfOrigin": "City 10",
+    "address": "Street 98, City 7",
+    "familyPhone": "0644768881",
+    "isRegister": true,
+    "identification": "206338278",
+    "rentalRelationship": "H\u1ecd h\u00e0ng (anh em h\u1ecd, c\u00f4/ch\u00fa/ch\u00e1u...)",
+    "contractResponseDTO": {
+      "id": "CNT003"
+    }
+  },
+  {
+    "id": 5,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 5",
+    "gender": "Female",
+    "status": "NOTACTIVE",
+    "phone": "0384571100",
+    "dob": "2002-07-03",
+    "placeOfOrigin": "City 8",
+    "address": "Street 65, City 9",
+    "familyPhone": "0852998727",
+    "isRegister": true,
+    "identification": "357519455",
+    "rentalRelationship": "Ng\u01b0\u1eddi thu\u00ea ch\u00ednh - Ng\u01b0\u1eddi thu\u00ea ph\u1ee5",
+    "contractResponseDTO": {
+      "id": "CNT012"
+    }
+  },
+  {
+    "id": 6,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 6",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0872393703",
+    "dob": "2005-09-14",
+    "placeOfOrigin": "City 3",
+    "address": "Street 62, City 4",
+    "familyPhone": "0458268730",
+    "isRegister": false,
+    "identification": "313186562",
+    "rentalRelationship": "\u0110\u1ed3ng nghi\u1ec7p",
+    "contractResponseDTO": {
+      "id": "CNT002"
+    }
+  },
+  {
+    "id": 7,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 7",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0642297572",
+    "dob": "1998-07-28",
+    "placeOfOrigin": "City 8",
+    "address": "Street 41, City 2",
+    "familyPhone": "0824648076",
+    "isRegister": false,
+    "identification": "201717490",
+    "rentalRelationship": "B\u1ea1n b\u00e8",
+    "contractResponseDTO": {
+      "id": "CNT020"
+    }
+  },
+  {
+    "id": 8,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 8",
+    "gender": "Female",
+    "status": "NOTACTIVE",
+    "phone": "0430201881",
+    "dob": "1995-04-11",
+    "placeOfOrigin": "City 8",
+    "address": "Street 88, City 6",
+    "familyPhone": "0889327884",
+    "isRegister": true,
+    "identification": "847463113",
+    "rentalRelationship": "Ng\u01b0\u1eddi xa l\u1ea1 (ch\u1ec9 l\u00e0 b\u1ea1n c\u00f9ng ph\u00f2ng, kh\u00f4ng quen bi\u1ebft tr\u01b0\u1edbc)",
+    "contractResponseDTO": {
+      "id": "CNT018"
+    }
+  },
+  {
+    "id": 9,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 9",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0126348780",
+    "dob": "1992-09-10",
+    "placeOfOrigin": "City 6",
+    "address": "Street 62, City 10",
+    "familyPhone": "0167403074",
+    "isRegister": true,
+    "identification": "141952791",
+    "rentalRelationship": "Ng\u01b0\u1eddi c\u00f9ng qu\u00ea",
+    "contractResponseDTO": {
+      "id": "CNT019"
+    }
+  },
+  {
+    "id": 10,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 10",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0436877711",
+    "dob": "1997-12-25",
+    "placeOfOrigin": "City 5",
+    "address": "Street 74, City 5",
+    "familyPhone": "0846440193",
+    "isRegister": true,
+    "identification": "929917280",
+    "rentalRelationship": "Ng\u01b0\u1eddi y\u00eau",
+    "contractResponseDTO": {
+      "id": "CNT010"
+    }
+  },
+  {
+    "id": 11,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 11",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0385849594",
+    "dob": "2001-08-23",
+    "placeOfOrigin": "City 8",
+    "address": "Street 69, City 6",
+    "familyPhone": "0413491897",
+    "isRegister": true,
+    "identification": "987159156",
+    "rentalRelationship": "V\u1ee3 ch\u1ed3ng",
+    "contractResponseDTO": {
+      "id": "CNT020"
+    }
+  },
+  {
+    "id": 12,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 12",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0387780184",
+    "dob": "2000-12-03",
+    "placeOfOrigin": "City 1",
+    "address": "Street 56, City 8",
+    "familyPhone": "0526878730",
+    "isRegister": false,
+    "identification": "644600935",
+    "rentalRelationship": "B\u1ea1n b\u00e8",
+    "contractResponseDTO": {
+      "id": "CNT020"
+    }
+  },
+  {
+    "id": 13,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 13",
+    "gender": "Male",
+    "status": "NOTACTIVE",
+    "phone": "0774086102",
+    "dob": "2001-08-21",
+    "placeOfOrigin": "City 6",
+    "address": "Street 81, City 5",
+    "familyPhone": "0269108814",
+    "isRegister": true,
+    "identification": "288712088",
+    "rentalRelationship": "Ng\u01b0\u1eddi thu\u00ea ch\u00ednh - Ng\u01b0\u1eddi b\u1ea3o l\u00e3nh (ng\u01b0\u1eddi thu\u00ea ch\u00ednh b\u1ea3o l\u00e3nh cho ng\u01b0\u1eddi kh\u00e1c \u1edf c\u00f9ng)",
+    "contractResponseDTO": {
+      "id": "CNT009"
+    }
+  },
+  {
+    "id": 14,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 14",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0929588013",
+    "dob": "1993-09-26",
+    "placeOfOrigin": "City 3",
+    "address": "Street 21, City 9",
+    "familyPhone": "0923203933",
+    "isRegister": false,
+    "identification": "408451784",
+    "rentalRelationship": "Ng\u01b0\u1eddi thu\u00ea ch\u00ednh - Ng\u01b0\u1eddi thu\u00ea ph\u1ee5",
+    "contractResponseDTO": {
+      "id": "CNT007"
+    }
+  },
+  {
+    "id": 15,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 15",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0724918176",
+    "dob": "1998-12-08",
+    "placeOfOrigin": "City 7",
+    "address": "Street 20, City 8",
+    "familyPhone": "0224339607",
+    "isRegister": false,
+    "identification": "820450399",
+    "rentalRelationship": "Ng\u01b0\u1eddi thu\u00ea ch\u00ednh - Ng\u01b0\u1eddi thu\u00ea ph\u1ee5",
+    "contractResponseDTO": {
+      "id": "CNT016"
+    }
+  },
+  {
+    "id": 16,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 16",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0586507768",
+    "dob": "1996-02-17",
+    "placeOfOrigin": "City 5",
+    "address": "Street 3, City 1",
+    "familyPhone": "0912352608",
+    "isRegister": false,
+    "identification": "216862718",
+    "rentalRelationship": "Ng\u01b0\u1eddi c\u00f9ng qu\u00ea",
+    "contractResponseDTO": {
+      "id": "CNT006"
+    }
+  },
+  {
+    "id": 17,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 17",
+    "gender": "Male",
+    "status": "NOTACTIVE",
+    "phone": "0984997049",
+    "dob": "1990-10-01",
+    "placeOfOrigin": "City 7",
+    "address": "Street 61, City 8",
+    "familyPhone": "0859718775",
+    "isRegister": false,
+    "identification": "663071055",
+    "rentalRelationship": "\u0110\u1ed3ng nghi\u1ec7p",
+    "contractResponseDTO": {
+      "id": "CNT010"
+    }
+  },
+  {
+    "id": 18,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 18",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0885692897",
+    "dob": "2003-06-30",
+    "placeOfOrigin": "City 1",
+    "address": "Street 7, City 7",
+    "familyPhone": "0308369176",
+    "isRegister": false,
+    "identification": "507116451",
+    "rentalRelationship": "\u0110\u1ed3ng nghi\u1ec7p",
+    "contractResponseDTO": {
+      "id": "CNT009"
+    }
+  },
+  {
+    "id": 19,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 19",
+    "gender": "Male",
+    "status": "NOTACTIVE",
+    "phone": "0584744755",
+    "dob": "1995-10-20",
+    "placeOfOrigin": "City 9",
+    "address": "Street 78, City 9",
+    "familyPhone": "0212030592",
+    "isRegister": true,
+    "identification": "487799144",
+    "rentalRelationship": "Ng\u01b0\u1eddi xa l\u1ea1 (ch\u1ec9 l\u00e0 b\u1ea1n c\u00f9ng ph\u00f2ng, kh\u00f4ng quen bi\u1ebft tr\u01b0\u1edbc)",
+    "contractResponseDTO": {
+      "id": "CNT019"
+    }
+  },
+  {
+    "id": 20,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 20",
+    "gender": "Female",
+    "status": "NOTACTIVE",
+    "phone": "0530076723",
+    "dob": "2002-10-17",
+    "placeOfOrigin": "City 3",
+    "address": "Street 47, City 8",
+    "familyPhone": "0360515294",
+    "isRegister": true,
+    "identification": "901175665",
+    "rentalRelationship": "Ng\u01b0\u1eddi c\u00f9ng qu\u00ea",
+    "contractResponseDTO": {
+      "id": "CNT019"
+    }
+  },
+  {
+    "id": 21,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 21",
+    "gender": "Female",
+    "status": "NOTACTIVE",
+    "phone": "0708504032",
+    "dob": "2001-12-18",
+    "placeOfOrigin": "City 7",
+    "address": "Street 68, City 5",
+    "familyPhone": "0361602237",
+    "isRegister": false,
+    "identification": "281491072",
+    "rentalRelationship": "Anh ch\u1ecb em ru\u1ed9t",
+    "contractResponseDTO": {
+      "id": "CNT012"
+    }
+  },
+  {
+    "id": 22,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 22",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0221436240",
+    "dob": "1999-10-20",
+    "placeOfOrigin": "City 2",
+    "address": "Street 27, City 10",
+    "familyPhone": "0230517288",
+    "isRegister": true,
+    "identification": "825972346",
+    "rentalRelationship": "Ng\u01b0\u1eddi c\u00f9ng qu\u00ea",
+    "contractResponseDTO": {
+      "id": "CNT016"
+    }
+  },
+  {
+    "id": 23,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 23",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0935569817",
+    "dob": "1991-05-13",
+    "placeOfOrigin": "City 3",
+    "address": "Street 80, City 6",
+    "familyPhone": "0422585021",
+    "isRegister": true,
+    "identification": "248745348",
+    "rentalRelationship": "Anh ch\u1ecb em ru\u1ed9t",
+    "contractResponseDTO": {
+      "id": "CNT016"
+    }
+  },
+  {
+    "id": 24,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 24",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0275897954",
+    "dob": "1998-07-23",
+    "placeOfOrigin": "City 1",
+    "address": "Street 54, City 7",
+    "familyPhone": "0871906931",
+    "isRegister": true,
+    "identification": "727433349",
+    "rentalRelationship": "Ng\u01b0\u1eddi c\u00f9ng qu\u00ea",
+    "contractResponseDTO": {
+      "id": "CNT005"
+    }
+  },
+  {
+    "id": 25,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 25",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0119831159",
+    "dob": "1995-04-05",
+    "placeOfOrigin": "City 1",
+    "address": "Street 14, City 1",
+    "familyPhone": "0354920235",
+    "isRegister": true,
+    "identification": "960774331",
+    "rentalRelationship": "Anh ch\u1ecb em ru\u1ed9t",
+    "contractResponseDTO": {
+      "id": "CNT008"
+    }
+  },
+  {
+    "id": 26,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 26",
+    "gender": "Male",
+    "status": "NOTACTIVE",
+    "phone": "0610780096",
+    "dob": "1998-01-07",
+    "placeOfOrigin": "City 1",
+    "address": "Street 43, City 5",
+    "familyPhone": "0247353771",
+    "isRegister": true,
+    "identification": "761455658",
+    "rentalRelationship": "B\u1ea1n c\u00f9ng l\u1edbp",
+    "contractResponseDTO": {
+      "id": "CNT014"
+    }
+  },
+  {
+    "id": 27,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 27",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0307397364",
+    "dob": "2004-05-18",
+    "placeOfOrigin": "City 7",
+    "address": "Street 28, City 5",
+    "familyPhone": "0403138743",
+    "isRegister": true,
+    "identification": "907100083",
+    "rentalRelationship": "V\u1ee3 ch\u1ed3ng",
+    "contractResponseDTO": {
+      "id": "CNT011"
+    }
+  },
+  {
+    "id": 28,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 28",
+    "gender": "Male",
+    "status": "ACTIVE",
+    "phone": "0592109692",
+    "dob": "1995-05-26",
+    "placeOfOrigin": "City 4",
+    "address": "Street 37, City 7",
+    "familyPhone": "0576278867",
+    "isRegister": true,
+    "identification": "936271787",
+    "rentalRelationship": "B\u1ea1n c\u00f9ng l\u1edbp",
+    "contractResponseDTO": {
+      "id": "CNT010"
+    }
+  },
+  {
+    "id": 29,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 29",
+    "gender": "Female",
+    "status": "ACTIVE",
+    "phone": "0756264034",
+    "dob": "2000-09-01",
+    "placeOfOrigin": "City 9",
+    "address": "Street 27, City 4",
+    "familyPhone": "0264534053",
+    "isRegister": true,
+    "identification": "880248064",
+    "rentalRelationship": "B\u1ea1n c\u00f9ng l\u1edbp",
+    "contractResponseDTO": {
+      "id": "CNT018"
+    }
+  },
+  {
+    "id": 30,
+    "createAt": "2025-03-25",
+    "updateAt": "2025-03-25",
+    "createBy": "Admin",
+    "fullName": "User 30",
+    "gender": "Male",
+    "status": "NOTACTIVE",
+    "phone": "0905794724",
+    "dob": "2000-09-01",
+    "placeOfOrigin": "City 1",
+    "address": "Street 52, City 5",
+    "familyPhone": "0373536920",
+    "isRegister": false,
+    "identification": "472059383",
+    "rentalRelationship": "Anh ch\u1ecb em ru\u1ed9t",
+    "contractResponseDTO": {
+      "id": "CNT011"
+    }
+  }
+]

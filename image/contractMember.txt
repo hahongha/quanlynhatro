@@ -1,0 +1,383 @@
+[
+  {
+    "id": 1,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Nguyễn Văn A",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0901123456",
+    "dob": "1995-05-15",
+    "placeOfOrigin": "Xã Đông Ngạc, Huyện Từ Liêm, Thành phố Hà Nội",
+    "address": "Số 12, Ngõ 34, Xã Đông Ngạc, Huyện Từ Liêm, Thành phố Hà Nội",
+    "familyPhone": "0987654321",
+    "isRegister": true,
+    "identification": "1234567899",
+    "rentalRelationship": "Chủ hộ"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 2,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Trần Thị B",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0912345678",
+    "dob": "1997-08-22",
+    "placeOfOrigin": "Xã An Đồng, Huyện An Dương, Thành phố Hải Phòng",
+    "address": "Số 56, Đường Lê Hồng Phong, Xã An Đồng, Huyện An Dương, Thành phố Hải Phòng",
+    "familyPhone": "0978123456",
+    "isRegister": true,
+    "identification": "987654321",
+    "rentalRelationship": "Bạn cùng phòng"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 3,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Lê Văn C",
+    "gender": "MALE",
+    "status": "INACTIVE",
+    "phone": "0923456789",
+    "dob": "1998-11-10",
+    "placeOfOrigin": "Xã Hòa Khánh, Huyện Hòa Vang, Thành phố Đà Nẵng",
+    "address": "Số 78, Đường Trần Phú, Xã Hòa Khánh, Huyện Hòa Vang, Thành phố Đà Nẵng",
+    "familyPhone": "0967123456",
+    "isRegister": true,
+    "identification": "456123789",
+    "rentalRelationship": "Anh trai"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 4,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Phạm Thị D",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0934567890",
+    "dob": "1996-06-30",
+    "placeOfOrigin": "Xã Bình Chánh, Huyện Bình Chánh, Thành phố Hồ Chí Minh",
+    "address": "Số 45, Đường Nguyễn Huệ, Xã Bình Chánh, Huyện Bình Chánh, Thành phố Hồ Chí Minh",
+    "familyPhone": "0956123456",
+    "isRegister": true,
+    "identification": "789456123",
+    "rentalRelationship": "Em gái"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 5,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Đỗ Văn E",
+    "gender": "MALE",
+    "status": "INACTIVE",
+    "phone": "0945678901",
+    "dob": "1994-09-18",
+    "placeOfOrigin": "Xã Mỹ Khánh, Huyện Phong Điền, Thành phố Cần Thơ",
+    "address": "Số 23, Đường Lê Lợi, Xã Mỹ Khánh, Huyện Phong Điền, Thành phố Cần Thơ",
+    "familyPhone": "0945123456",
+    "isRegister": true,
+    "identification": "852369741",
+    "rentalRelationship": "Chủ hộ"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 6,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Hoàng Thị F",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0956789012",
+    "dob": "1993-04-25",
+    "placeOfOrigin": "Xã Phú Mậu, Huyện Phú Vang, Tỉnh Thừa Thiên Huế",
+    "address": "Số 34, Đường Trường Tiền, Xã Phú Mậu, Huyện Phú Vang, Tỉnh Thừa Thiên Huế",
+    "familyPhone": "0934123456",
+    "isRegister": true,
+    "identification": "963852741",
+    "rentalRelationship": "Chủ hộ"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 7,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Ngô Văn G",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0967890123",
+    "dob": "1992-07-14",
+    "placeOfOrigin": "Xã Phù Khê, Thị xã Từ Sơn, Tỉnh Bắc Ninh",
+    "address": "Số 78, Quốc Lộ 1A, Xã Phù Khê, Thị xã Từ Sơn, Tỉnh Bắc Ninh",
+    "familyPhone": "0923123456",
+    "isRegister": true,
+    "identification": "741258963",
+    "rentalRelationship": "Bạn cùng phòng"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 8,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Bùi Thị H",
+    "gender": "FEMALE",
+    "status": "INACTIVE",
+    "phone": "0978901234",
+    "dob": "1999-12-05",
+    "placeOfOrigin": "Xã Hưng Lộc, Huyện Hưng Nguyên, Tỉnh Nghệ An",
+    "address": "Số 56, Đường Nguyễn Trãi, Xã Hưng Lộc, Huyện Hưng Nguyên, Tỉnh Nghệ An",
+    "familyPhone": "0912123456",
+    "isRegister": true,
+    "identification": "159753486",
+    "rentalRelationship": "Em gái"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 9,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Lý Văn I",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0989012345",
+    "dob": "2000-02-20",
+    "placeOfOrigin": "Xã Xuân Ninh, Huyện Quảng Ninh, Tỉnh Quảng Bình",
+    "address": "Số 67, Đường Hùng Vương, Xã Xuân Ninh, Huyện Quảng Ninh, Tỉnh Quảng Bình",
+    "familyPhone": "0901123456",
+    "isRegister": true,
+    "identification": "357159486",
+    "rentalRelationship": "Anh trai"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 11,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Nguyễn Thị K",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0991234567",
+    "dob": "1991-03-21",
+    "placeOfOrigin": "Xã Vĩnh Thịnh, Huyện Hòa Bình, Tỉnh Bạc Liêu",
+    "address": "Số 10, Đường Hùng Vương, Xã Vĩnh Thịnh, Huyện Hòa Bình, Tỉnh Bạc Liêu",
+    "familyPhone": "0987654321",
+    "isRegister": true,
+    "identification": "741963852",
+    "rentalRelationship": "Bạn cùng phòng"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 12,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Trần Văn L",
+    "gender": "MALE",
+    "status": "INACTIVE",
+    "phone": "0987654321",
+    "dob": "1990-12-12",
+    "placeOfOrigin": "Xã Cẩm Thành, Huyện Cẩm Xuyên, Tỉnh Hà Tĩnh",
+    "address": "Số 22, Đường Trần Hưng Đạo, Xã Cẩm Thành, Huyện Cẩm Xuyên, Tỉnh Hà Tĩnh",
+    "familyPhone": "0976543210",
+    "isRegister": true,
+    "identification": "852147963",
+    "rentalRelationship": "Anh trai"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 13,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Phạm Văn M",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0976543210",
+    "dob": "1999-06-28",
+    "placeOfOrigin": "Xã Mỹ Lộc, Huyện Cần Giuộc, Tỉnh Long An",
+    "address": "Số 89, Đường Lê Lợi, Xã Mỹ Lộc, Huyện Cần Giuộc, Tỉnh Long An",
+    "familyPhone": "0965432109",
+    "isRegister": true,
+    "identification": "951753486",
+    "rentalRelationship": "Chủ hộ"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 14,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Lê Thị N",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0965432109",
+    "dob": "1996-05-05",
+    "placeOfOrigin": "Xã Hòa Lợi, Huyện Thủ Dầu Một, Tỉnh Bình Dương",
+    "address": "Số 56, Đường Nguyễn Văn Trỗi, Xã Hòa Lợi, Huyện Thủ Dầu Một, Tỉnh Bình Dương",
+    "familyPhone": "0954321098",
+    "isRegister": true,
+    "identification": "789654123",
+    "rentalRelationship": "Bạn cùng phòng"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 15,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Bùi Văn O",
+    "gender": "MALE",
+    "status": "INACTIVE",
+    "phone": "0954321098",
+    "dob": "1997-04-18",
+    "placeOfOrigin": "Xã Vĩnh Lộc, Huyện Vĩnh Thạnh, Thành phố Cần Thơ",
+    "address": "Số 77, Đường Cách Mạng Tháng 8, Xã Vĩnh Lộc, Huyện Vĩnh Thạnh, Thành phố Cần Thơ",
+    "familyPhone": "0943210987",
+    "isRegister": true,
+    "identification": "654987321",
+    "rentalRelationship": "Chủ hộ"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 16,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Hoàng Thị P",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0943210987",
+    "dob": "1995-02-14",
+    "placeOfOrigin": "Xã Bình Hòa, Huyện Châu Thành, Tỉnh An Giang",
+    "address": "Số 88, Đường Hoàng Văn Thụ, Xã Bình Hòa, Huyện Châu Thành, Tỉnh An Giang",
+    "familyPhone": "0932109876",
+    "isRegister": true,
+    "identification": "321654987",
+    "rentalRelationship": "Bạn cùng phòng"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 17,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Đỗ Văn Q",
+    "gender": "MALE",
+    "status": "ACTIVE",
+    "phone": "0932109876",
+    "dob": "2000-01-10",
+    "placeOfOrigin": "Xã Tân Phú, Huyện Tân Kỳ, Tỉnh Nghệ An",
+    "address": "Số 99, Đường Nguyễn Huệ, Xã Tân Phú, Huyện Tân Kỳ, Tỉnh Nghệ An",
+    "familyPhone": "0921098765",
+    "isRegister": true,
+    "identification": "456789321",
+    "rentalRelationship": "Anh trai"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 18,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Ngô Thị R",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0921098765",
+    "dob": "1998-09-09",
+    "placeOfOrigin": "Xã An Hòa, Huyện An Lão, Thành phố Hải Phòng",
+    "address": "Số 44, Đường Quang Trung, Xã An Hòa, Huyện An Lão, Thành phố Hải Phòng",
+    "familyPhone": "0910987654",
+    "isRegister": true,
+    "identification": "9876543211",
+    "rentalRelationship": "Chủ hộ"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 19,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Lý Văn S",
+    "gender": "MALE",
+    "status": "INACTIVE",
+    "phone": "0910987654",
+    "dob": "1994-07-07",
+    "placeOfOrigin": "Xã Tân Bình, Huyện Vĩnh Cửu, Tỉnh Đồng Nai",
+    "address": "Số 66, Đường Lý Thường Kiệt, Xã Tân Bình, Huyện Vĩnh Cửu, Tỉnh Đồng Nai",
+    "familyPhone": "0909876543",
+    "isRegister": true,
+    "identification": "123456789",
+    "rentalRelationship": "Bạn cùng phòng"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  },
+  {
+    "id": 20,
+    "createAt": "2025-03-27",
+    "updateAt": "2025-03-27",
+    "createBy": "Admin",
+    "fullName": "Bùi Thị T",
+    "gender": "FEMALE",
+    "status": "ACTIVE",
+    "phone": "0909876543",
+    "dob": "1993-03-03",
+    "placeOfOrigin": "Xã Cửa Đại, Huyện Hội An, Tỉnh Quảng Nam",
+    "address": "Số 11, Đường Bạch Đằng, Xã Cửa Đại, Huyện Hội An, Tỉnh Quảng Nam",
+    "familyPhone": "0898765432",
+    "isRegister": true,
+    "identification": "654123789",
+    "rentalRelationship": "Em gái"
+  ,
+    "contractResponseDTO": {
+      "id": "string"}
+  }
+]
+
