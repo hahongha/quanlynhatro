@@ -17,8 +17,46 @@ import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
 import PersonalInfoContent from './PersonalInfoContent';
 import SecurityContent from './SecurityContent';
+import { useNavigate } from 'react-router';
 
 function UserProfile() {
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState(null);
+  const [roleData, setRoleData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (!userData) {
+    return (
+      <Typography variant="h6" color="error">
+        Không thể tải dữ liệu người dùng.
+      </Typography>
+    );
+  }
+  useEffect(() => {
+    const profileString = localStorage.getItem('profile');
+    if (!profileString) {
+      navigate('/login');
+    } else {
+      try {
+        const profile = JSON.parse(profileString);
+        setUserData(profile);
+        setRoleData(profile.role);
+        setLoading(false);
+      } catch (error) {
+        console.error('Lỗi parse JSON:', error);
+        navigate('/login');
+      }
+    }
+  }, []);
+
   // State to track which section is currently selected
   const [activeSection, setActiveSection] = useState('personalInfo');
 

@@ -6,6 +6,44 @@ import { Container, Box, Typography, Avatar, Grid, Paper, Chip, CircularProgress
 import { useNavigate } from 'react-router-dom';
 
 export default function UserInfoPage() {
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState(null);
+  const [roleData, setRoleData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const profileString = localStorage.getItem('profile');
+    if (!profileString) {
+      navigate('/login');
+    } else {
+      try {
+        const profile = JSON.parse(profileString);
+        setUserData(profile);
+        setRoleData(profile.role);
+        setLoading(false);
+      } catch (error) {
+        console.error('Lỗi parse JSON:', error);
+        navigate('/login');
+      }
+    }
+  }, []);
+
+  if (loading) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (!userData) {
+    return (
+      <Typography variant="h6" color="error">
+        Không thể tải dữ liệu người dùng.
+      </Typography>
+    );
+  }
+
   return (
     <Container maxWidth="md" sx={{ py: 4 }}>
       <Paper elevation={3} sx={{ overflow: 'hidden', borderRadius: 4 }}>

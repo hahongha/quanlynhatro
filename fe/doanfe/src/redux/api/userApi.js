@@ -22,3 +22,8 @@ export const updateUser = async (data) => {
   const response = await axiosInstance.put(`/user`, data);
   return response;
 };
+
+export const updateProfile = async (data) => {
+  const response = await axiosInstance.put(`/user/userProfile`, data);
+  return response;
+};

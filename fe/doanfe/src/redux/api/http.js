@@ -95,11 +95,11 @@ class Http {
   // Hàm gọi API lấy role
   async fetchRole() {
     try {
-      // const response = await this.instance.get(authenticationPath.getRole);
-      // const roleData = response.data.data; // Dữ liệu trả về từ API
-      // // Xử lý roleData theo nhu cầu, ví dụ lưu vào localStorage
-      // localStorage.setItem('role', JSON.stringify(roleData));
-      // return roleData;
+      const response = await this.instance.get(authenticationPath.getRole);
+      const roleData = response.data; // Dữ liệu trả về từ API
+      // Xử lý roleData theo nhu cầu, ví dụ lưu vào localStorage
+      localStorage.setItem('role', JSON.stringify(roleData));
+      return roleData;
     } catch (error) {
       console.error('Failed to fetch role:', error);
       toast.error('Không thể lấy thông tin role.');

@@ -15,7 +15,6 @@ import Renter from '../pages/renter/Renter';
 import ContractMember from '../pages/contract_member/ContractMember';
 import Contract from '../pages/contract/Contract';
 import Service from '../pages/service/Service';
-import Profile from '../pages/userProfile/Profile';
 import UserTest from '../pages/userPage/UserTest';
 import UserContractMember from '../pages/userPage/UserContractMember';
 import UserContract from '../pages/userPage/UserContract';
@@ -25,7 +24,8 @@ import UserBill from '../pages/userPage/UserBill';
 import UserComplaint from '../pages/userPage/UserComplaint';
 import UserPayment from '../pages/userPage/UserPayment';
 import UserRoom from '../pages/userPage/UserRoom';
-
+import Profile from '../pages/dashboard/Profile.jsx';
+import UserEditForm from '../pages/dashboard/EditProfile.jsx';
 // render- Dashboard
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/default')));
 
