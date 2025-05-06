@@ -86,15 +86,6 @@ public class JwtTokenProvider {
 
 	}
 
-	// public InvalidToken getToken(String token) {
-	// Claims claims =
-	// Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
-	// InvalidToken invalidToken = new InvalidToken();
-	// invalidToken.setId(claims.getId());
-	// invalidToken.setExpiryTime(claims.getExpiration());
-	// return invalidToken;
-	// }
-
 	public Claims validateToken(String authToken) {
 		try {
 			Claims claims = Jwts.parser()

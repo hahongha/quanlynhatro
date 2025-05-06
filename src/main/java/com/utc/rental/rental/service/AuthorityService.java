@@ -2,9 +2,9 @@ package com.utc.rental.rental.service;
 
 import java.util.List;
 
-import com.utc.rental.rental.dto.SearchDTO;
 import com.utc.rental.rental.dto.authority.AuthorityDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.search.SearchDTO;
 import com.utc.rental.rental.entity.Authority;
 
 public interface AuthorityService {

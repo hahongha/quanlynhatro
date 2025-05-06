@@ -24,6 +24,7 @@ import com.utc.rental.rental.dto.authority.AuthorityDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
 import com.utc.rental.rental.dto.user.UserDTO;
 import com.utc.rental.rental.dto.user.UserLogin;
+import com.utc.rental.rental.dto.user.UserResponse;
 import com.utc.rental.rental.entity.User;
 import com.utc.rental.rental.security.securityv2.CurrentUser;
 import com.utc.rental.rental.security.securityv2.UserPrincipal;
@@ -100,11 +101,11 @@ public class AuthAPI {
 	}
 	
 	@GetMapping("/userProfile")
-	public ResponseDTO<UserDTO> getProfile(@CurrentUser UserPrincipal user) {
+	public ResponseDTO<UserResponse> getProfile(@CurrentUser UserPrincipal user) {
 		try {
 			User u = userService.findByUserName(user.getUsername());
-			UserDTO userDTO = new ModelMapper().map(u, UserDTO.class);
-			return ResponseDTO.<UserDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(userDTO).build();
+			UserResponse userDTO = new ModelMapper().map(u, UserResponse.class);
+			return ResponseDTO.<UserResponse>builder().code(String.valueOf(HttpStatus.OK.value())).data(userDTO).build();
 
 		} catch (Exception e) {
 			e.printStackTrace();

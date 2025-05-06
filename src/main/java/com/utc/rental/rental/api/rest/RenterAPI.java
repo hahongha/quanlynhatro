@@ -13,17 +13,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.utc.rental.rental.api.error.BadRequestAlertException;
-import com.utc.rental.rental.dto.RenterDTO;
-import com.utc.rental.rental.dto.SearchDTO;
+import com.utc.rental.rental.dto.renter.RenterDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.room.RoomDTO;
+import com.utc.rental.rental.dto.search.SearchDTO;
+import com.utc.rental.rental.dto.search.SearchRenter;
 import com.utc.rental.rental.dto.user.UserDTO;
 import com.utc.rental.rental.entity.Renter;
 import com.utc.rental.rental.entity.User;
 import com.utc.rental.rental.security.securityv2.CurrentUser;
 import com.utc.rental.rental.security.securityv2.UserPrincipal;
+import com.utc.rental.rental.service.CloudinaryService;
 import com.utc.rental.rental.service.RenterService;
 import com.utc.rental.rental.service.UserService;
 
@@ -34,24 +39,21 @@ import jakarta.validation.Valid;
 public class RenterAPI {
 	@Autowired
 	private RenterService renterService;
-	
+
 	@Autowired
-	private UserService userService;
+	private CloudinaryService cloudinaryService;
+	
 
 	private static final String ENTITY_NAME = "Renter";
 
 	@PostMapping("")
-	public ResponseDTO<RenterDTO> create(@RequestBody RenterDTO RenterDTO) throws URISyntaxException {
-		renterService.create(RenterDTO);
-		return ResponseDTO.<RenterDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(RenterDTO).build();
-	}
-	
-	@PostMapping("/createList")
-	public ResponseDTO<List<RenterDTO>> createList(@RequestBody List<RenterDTO> RenterDTOs) throws URISyntaxException {
-		for (RenterDTO renterDTO : RenterDTOs) {
-			renterService.create(renterDTO);
+	public ResponseDTO<RenterDTO> create(@RequestPart("renter") RenterDTO renterDTO, @RequestPart(value = "file", required = false)  MultipartFile file) throws URISyntaxException {
+		if(file!=null) {
+			String images = cloudinaryService.uploadImage(file, "RENTER");
+			renterDTO.setImageUrl(images);
 		}
-		return ResponseDTO.<List<RenterDTO>>builder().code(String.valueOf(HttpStatus.OK.value())).data(RenterDTOs).build();
+		renterService.create(renterDTO);
+		return ResponseDTO.<RenterDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(renterDTO).build();
 	}
 
 	@DeleteMapping("/{id}")
@@ -66,8 +68,14 @@ public class RenterAPI {
 	}
 	
 	@PutMapping("")
-	public ResponseDTO<RenterDTO> update(@RequestBody RenterDTO RenterDTO) throws URISyntaxException {
-		return ResponseDTO.<RenterDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(renterService.update(RenterDTO)).build();
+	public ResponseDTO<RenterDTO> update(@RequestPart("renter") RenterDTO renterDTO, @RequestPart(value = "file", required = false)  MultipartFile file) throws URISyntaxException {
+		if(file!=null) {
+			String images = cloudinaryService.uploadImage(file, "RENTER");
+			renterDTO.setImageUrl(images);
+			
+		}
+		renterService.update(renterDTO);
+		return ResponseDTO.<RenterDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(renterDTO).build();
 	}
 	
 	@GetMapping("/getAll")
@@ -77,7 +85,7 @@ public class RenterAPI {
     }
 	
 	@PostMapping("/search")
-    public ResponseDTO<List<RenterDTO>> search(@RequestBody @Valid SearchDTO searchDTO) {
+    public ResponseDTO<List<RenterDTO>> search(@RequestBody @Valid SearchRenter searchDTO) {
         return renterService.search(searchDTO);
     }
 	

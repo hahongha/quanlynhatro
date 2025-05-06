@@ -13,9 +13,10 @@ public class DataInit implements CommandLineRunner {
 	InitService initService;
 	@Override
 	public void run(String... args) throws Exception {
-		initService.addAuthoritiesDefault();
-		initService.addRolesDefault();
-		initService.addUserRootDefault();
+//		initService.addAuthoritiesDefault();
+//		initService.addRolesDefault();
+//		initService.addUserRootDefault();
+//		initService.updateAllPass();
 	}
 	
 }

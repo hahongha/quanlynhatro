@@ -2,7 +2,7 @@ package com.utc.rental.rental.service;
 
 import java.util.List;
 
-import com.utc.rental.rental.dto.StaffDTO;
+import com.utc.rental.rental.dto.staff.StaffDTO;
 
 public interface StaffService {
 	StaffDTO create(StaffDTO StaffDTO);
@@ -14,5 +14,9 @@ public interface StaffService {
 	StaffDTO get(String id);
 	
 	List<StaffDTO> getAll();
+	
+	
 	Long count();
+	
+	StaffDTO getProfile(String userId);
 }

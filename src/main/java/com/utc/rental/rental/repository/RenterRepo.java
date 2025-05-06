@@ -11,11 +11,19 @@ import org.springframework.data.repository.query.Param;
 import com.utc.rental.rental.entity.Renter;
 
 public interface RenterRepo extends JpaRepository<Renter, String> {
-	@Query("SELECT r FROM Renter r")
-	Page<Renter> search(@Param("keyword") String keyword, Pageable pageable);
+	@Query("SELECT r FROM Renter r where (r.phone like :x or r.fullName like :x or r.identification like :x) "
+			+ "and r.status like :s")
+	Page<Renter> search(@Param("x") String keyword,
+			@Param("s") String status,Pageable pageable);
 	
 	Optional<Renter> findByIdentificationOrId(String identification, String id);
-	Optional<Renter> findByIdentification(String identification);
+	
+	@Query("SELECT r FROM Renter r where r.identification= :identification or r.id = id")
+	Optional<Renter> findByID(String identification, String id);
+	
+	@Query("SELECT r FROM Renter r where r.identification = :x")
+	Optional<Renter> findByIdentification(@Param("x") String identification);
+	
 	@Query("SELECT r FROM Renter r where r.user.userId = :x")
 	Optional<Renter> findByUserId(@Param("x") String userId);
 }

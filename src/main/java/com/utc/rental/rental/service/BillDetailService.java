@@ -15,4 +15,6 @@ public interface BillDetailService {
 	BillDetailDTO get(String id);
 	
 	List<BillDetailDTO> getAll();
+	
+	List<BillDetailDTO> getByBillId(String id);
 }

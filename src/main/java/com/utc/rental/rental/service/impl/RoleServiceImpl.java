@@ -25,10 +25,10 @@ import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 
 import com.utc.rental.rental.api.error.BadRequestAlertException;
-import com.utc.rental.rental.dto.SearchDTO;
 import com.utc.rental.rental.dto.authority.AuthorityDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
 import com.utc.rental.rental.dto.role.RoleDTO;
+import com.utc.rental.rental.dto.search.SearchDTO;
 import com.utc.rental.rental.entity.Authority;
 import com.utc.rental.rental.entity.Role;
 import com.utc.rental.rental.repository.RoleRepo;

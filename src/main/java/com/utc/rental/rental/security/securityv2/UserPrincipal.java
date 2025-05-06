@@ -20,8 +20,6 @@ public class UserPrincipal implements UserDetails {
 
 	private String user_id;
 
-	private String name;
-
 	private String username;
 
 	@JsonIgnore
@@ -39,15 +37,15 @@ public class UserPrincipal implements UserDetails {
 
 	public static UserPrincipal create(User user) {
 
-		Set<String> permissions = new HashSet<String>();
-
-		for (Authority authority : user.getRole().getAuthorities()) {
-			permissions.add(authority.getName());
-		}
-
-		List<GrantedAuthority> authorities = permissions.stream()
-				.map(permission -> new SimpleGrantedAuthority(permission.toUpperCase())).collect(Collectors.toList());
-		return new UserPrincipal(user.getUserId(), user.getUserName(), user.getPassword(), authorities);
+//		Set<String> permissions = new HashSet<String>();
+//
+//		for (Authority authority : user.getRole().getAuthorities()) {
+//			permissions.add(authority.getName());
+//		}
+//
+//		List<GrantedAuthority> authorities = permissions.stream()
+//				.map(permission -> new SimpleGrantedAuthority(permission.toUpperCase())).collect(Collectors.toList());
+		return new UserPrincipal(user.getUserId(), user.getUserName(), user.getPassword(), null);
 	}
 
 	public String getUser_id() {
@@ -56,14 +54,6 @@ public class UserPrincipal implements UserDetails {
 
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public void setUsername(String username) {

@@ -6,15 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.utc.rental.rental.api.error.BadRequestAlertException;
-import com.utc.rental.rental.dto.SearchDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.search.SearchDTO;
 import com.utc.rental.rental.dto.user.UpdatePasswordDTO;
 import com.utc.rental.rental.dto.user.UserDTO;
 import com.utc.rental.rental.dto.user.UserUpdateDTO;
 import com.utc.rental.rental.entity.User;
 import com.utc.rental.rental.security.securityv2.CurrentUser;
 import com.utc.rental.rental.security.securityv2.UserPrincipal;
-import com.utc.rental.rental.service.CloudinaryService;
 import com.utc.rental.rental.service.UserService;
 
 import io.jsonwebtoken.io.IOException;
@@ -43,8 +42,8 @@ public class UserAPI {
 
 	private static final String ENTITY_NAME = "USER";
 	
-	@Autowired
-	private CloudinaryService cloudinaryService;
+//	@Autowired
+//	private CloudinaryService cloudinaryService;
 
 	@PostMapping("")
 	public ResponseDTO<UserDTO> create(@RequestBody UserDTO userDTO) throws URISyntaxException {
@@ -72,7 +71,7 @@ public class UserAPI {
 				.build();
 	}
 
-	@PutMapping("/update-password")
+	@PutMapping("/updatepassword")
 	public ResponseDTO<Void> updatePassword(@RequestBody @Valid UpdatePasswordDTO updatePassword) throws IOException {
 		userService.updatePassword(updatePassword);
 		return ResponseDTO.<Void>builder().code(String.valueOf(HttpStatus.OK.value())).build();
@@ -98,21 +97,21 @@ public class UserAPI {
 		return ResponseDTO.<Void>builder().code(String.valueOf(HttpStatus.OK.value())).build();
 	}
 	
-	//upload ảnh riêng
-	@PostMapping("/avatarUpload")
-    public ResponseEntity<String> uploadImage(@CurrentUser UserPrincipal currentUser, @RequestParam("file") MultipartFile file) {
-		UserDTO user = userService.getDTO(currentUser.getUser_id());
-        try {
-            String publicId = "users/user_" + user.getUserId(); // Định danh ảnh theo userId để ghi đè
-            String imageUrl = cloudinaryService.uploadImage(file, publicId);
-            user.setImageUrl(imageUrl);
-            userService.update(user);
-            return ResponseEntity.ok(imageUrl);
-        } catch (Exception e) {
-        	e.printStackTrace();
-            return ResponseEntity.internalServerError().body("Lỗi khi upload ảnh: " + e.getMessage());
-        }
-    }
+//	//upload ảnh riêng
+//	@PostMapping("/avatarUpload")
+//    public ResponseEntity<String> uploadImage(@CurrentUser UserPrincipal currentUser, @RequestParam("file") MultipartFile file) {
+//		UserDTO user = userService.getDTO(currentUser.getUser_id());
+//        try {
+//            String publicId = "users/user_" + user.getUserId(); // Định danh ảnh theo userId để ghi đè
+//            String imageUrl = cloudinaryService.uploadImage(file, publicId);
+//            user.setImageUrl(imageUrl);
+//            userService.update(user);
+//            return ResponseEntity.ok(imageUrl);
+//        } catch (Exception e) {
+//        	e.printStackTrace();
+//            return ResponseEntity.internalServerError().body("Lỗi khi upload ảnh: " + e.getMessage());
+//        }
+//    }
 	
 	@PutMapping("/update-profile")
     public ResponseDTO<UserDTO> updateProfile(@RequestBody UserUpdateDTO updatedUser, @CurrentUser UserPrincipal userPrincipal) {

@@ -3,8 +3,8 @@ package com.utc.rental.rental.dto.contract;
 
 import java.time.LocalDate;
 
-import com.utc.rental.rental.dto.RenterDTO;
-import com.utc.rental.rental.dto.RoomDTO;
+import com.utc.rental.rental.dto.renter.RenterDTO;
+import com.utc.rental.rental.dto.room.RoomDTO;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -16,12 +16,16 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ContractDTO {
-	String id;
+	private String id;
 	
 	// nguoi thue
-	RenterDTO renter;
-	// phong thue
-	RoomDTO room;
+	private RenterDTO renter;
+
+	private RoomDTO room;
+	
+	//số tháng thuê
+	int month;
+	
 
 	LocalDate startDate; // Ngày bắt đầu hợp đồng
 	LocalDate endDate; // Ngày kết thúc hợp đồng
@@ -29,8 +33,7 @@ public class ContractDTO {
 	Long rentalPrice; // Giá thuê/tháng
 	Long deposit; //tiền cọc
 	Boolean isDeposit; //da dat coc chua
-	Boolean isActive; //co hiệu lực chưa
-	LocalDate createAt;
-	LocalDate updateAt;
+	String status; //co hiệu lực chưa
+	LocalDate signatureDate;
 }
 

@@ -1,5 +1,11 @@
 package com.utc.rental.rental.dto.roomType;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.utc.rental.rental.config.StringListConverter;
+
+import jakarta.persistence.Convert;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,15 +17,14 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RoomTypeDTO {
 	Long id;
-
+	
 	String name;
 	
 	Long size;
-
-	String furniture;
 	
 	String description;
-
-	// giá tiền
-	Long cost;
+	
+	//các hình ảnh mẫu
+	@Convert(converter = StringListConverter.class)
+	List<String> imageList = new ArrayList<String>();
 }

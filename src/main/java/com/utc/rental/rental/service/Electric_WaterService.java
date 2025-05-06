@@ -3,6 +3,9 @@ package com.utc.rental.rental.service;
 import java.util.List;
 
 import com.utc.rental.rental.dto.index.Electric_WaterDTO;
+import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.search.SearchDTO;
+import com.utc.rental.rental.dto.search.SearchEW;
 
 
 public interface Electric_WaterService {
@@ -15,4 +18,6 @@ public interface Electric_WaterService {
 	Electric_WaterDTO get(String id);
 	
 	List<Electric_WaterDTO> getAll();
+	
+	ResponseDTO<List<Electric_WaterDTO>> search(SearchDTO searchDTO);
 }

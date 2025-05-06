@@ -16,9 +16,9 @@ import org.springframework.web.client.ResourceAccessException;
 import org.zalando.problem.Problem;
 
 import com.utc.rental.rental.api.error.BadRequestAlertException;
-import com.utc.rental.rental.dto.SearchDTO;
 import com.utc.rental.rental.dto.authority.AuthorityDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.search.SearchDTO;
 import com.utc.rental.rental.entity.Authority;
 import com.utc.rental.rental.repository.AuthorityRepo;
 import com.utc.rental.rental.service.AuthorityService;

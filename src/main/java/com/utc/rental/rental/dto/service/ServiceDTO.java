@@ -2,7 +2,7 @@ package com.utc.rental.rental.dto.service;
 
 import java.time.LocalDate;
 
-import com.utc.rental.rental.dto.RenterDTO;
+import com.utc.rental.rental.dto.renter.RenterDTO;
 import com.utc.rental.rental.dto.user.UserDTO;
 
 import lombok.AccessLevel;

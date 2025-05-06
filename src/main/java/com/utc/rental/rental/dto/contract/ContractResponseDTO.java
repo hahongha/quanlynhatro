@@ -1,7 +1,7 @@
 package com.utc.rental.rental.dto.contract;
 
-import com.utc.rental.rental.dto.RenterDTO;
-import com.utc.rental.rental.dto.RoomDTO;
+import com.utc.rental.rental.dto.renter.RenterDTO;
+import com.utc.rental.rental.dto.room.RoomDTO;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

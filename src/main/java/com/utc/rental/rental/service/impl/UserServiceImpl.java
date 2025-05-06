@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
@@ -24,8 +25,10 @@ import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 
 import com.utc.rental.rental.api.error.BadRequestAlertException;
-import com.utc.rental.rental.dto.SearchDTO;
+import com.utc.rental.rental.api.error.UnauthorizedException;
+import com.utc.rental.rental.config.DefaultValue.StatusActRef;
 import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.search.SearchDTO;
 import com.utc.rental.rental.dto.user.UpdatePasswordDTO;
 import com.utc.rental.rental.dto.user.UserDTO;
 import com.utc.rental.rental.dto.user.UserUpdateDTO;
@@ -102,8 +105,21 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO updatePassword(UpdatePasswordDTO updatePasswordDTO) {
-		// TODO Auto-generated method stub
-		return null;
+		LOG.info(updatePasswordDTO.toString());
+		User user = userRepo.findById(updatePasswordDTO.getUserId()).orElseThrow(()-> new UnauthorizedException("User not found"));
+		
+		Boolean compare_password = BCrypt.checkpw(updatePasswordDTO.getOldPassword(), user.getPassword());
+
+		if (!compare_password) {
+			LOG.error("Password wrong:"+ updatePasswordDTO.toString());
+			throw new UnauthorizedException("Password wrong");
+		}
+		
+		user.setPassword(new BCryptPasswordEncoder().encode(updatePasswordDTO.getNewPassword().trim().toString()));
+		userRepo.save(user);
+		LOG.info("update success:"+updatePasswordDTO.toString());
+		System.err.println(updatePasswordDTO.toString());
+		return new ModelMapper().map(user, UserDTO.class);
 	}
 
 	@Override
@@ -168,21 +184,28 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO updateUserProfile(UserUpdateDTO updatedUser) {
-		// Giả sử bạn đã có userId trong updatedUser
-        User existingUser = userRepo.findById(updatedUser.getUserId())
-                                          .orElseThrow(() -> new RuntimeException("User not found"));
+//		// Giả sử bạn đã có userId trong updatedUser
+//        User existingUser = userRepo.findById(updatedUser.getUserId())
+//                                          .orElseThrow(() -> new RuntimeException("User not found"));
+//
+//        // Cập nhật các trường mà người dùng có thể thay đổi
+//        existingUser.setEmail(updatedUser.getEmail());
+//        existingUser.setPhone(updatedUser.getPhone());
+//        existingUser.setFamilyPhone(updatedUser.getFamilyPhone());
+//        existingUser.setUserName(updatedUser.getUserName());
+//        existingUser.setImageUrl(updatedUser.getImageUrl());
+//
+//        // Lưu lại thông tin cập nhật
+//        userRepo.save(existingUser);
+//        
+//        return new ModelMapper().map(existingUser, UserDTO.class);
+		return null;
+	}
 
-        // Cập nhật các trường mà người dùng có thể thay đổi
-        existingUser.setEmail(updatedUser.getEmail());
-        existingUser.setPhone(updatedUser.getPhone());
-        existingUser.setFamilyPhone(updatedUser.getFamilyPhone());
-        existingUser.setUserName(updatedUser.getUserName());
-        existingUser.setImageUrl(updatedUser.getImageUrl());
-
-        // Lưu lại thông tin cập nhật
-        userRepo.save(existingUser);
-        
-        return new ModelMapper().map(existingUser, UserDTO.class);
+	@Override
+	public UserDTO updateURL(byte[] photos) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
