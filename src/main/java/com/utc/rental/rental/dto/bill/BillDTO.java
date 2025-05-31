@@ -44,6 +44,8 @@ public class BillDTO {
 	//tong tien
 	Long totalAmount;
 	
+	private boolean isExpense;
+	
     private RoomBill room;
 	
     private RenterBill renter;

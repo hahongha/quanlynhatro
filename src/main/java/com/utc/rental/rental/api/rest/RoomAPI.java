@@ -50,7 +50,11 @@ public class RoomAPI {
 			if(images!= null && images.size()>0)
 				roomDTO.getImages().addAll(images);
 		}
+		
 		roomService.create(roomDTO);
+		
+		System.err.println("create");
+		
 		return ResponseDTO.<RoomDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(roomDTO).build();
 	}
 

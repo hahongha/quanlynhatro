@@ -18,7 +18,8 @@ import lombok.experimental.FieldDefaults;
 @Data
 @EqualsAndHashCode(callSuper = false, exclude = {"bill"})
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Payment {
+public class Payment extends BaseModel {
+	private static final long serialVersionUID = 1L;
 	@Id
 	@NotNull
 	String id;

@@ -3,6 +3,7 @@ package com.utc.rental.rental.dto.staff;
 import java.time.LocalDate;
 
 import com.utc.rental.rental.dto.authority.AuthorityDTO;
+import com.utc.rental.rental.dto.user.UserDTO;
 import com.utc.rental.rental.dto.user.UserResponse;
 import com.utc.rental.rental.entity.User;
 
@@ -56,4 +57,6 @@ public class StaffDTO {
 
 	
 	private LocalDate updateAt;
+	
+	UserDTO user;
 }

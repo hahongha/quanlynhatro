@@ -15,6 +15,8 @@ public interface ContractMemberService {
 	ContractMemberDTO update(ContractMemberDTO ContractMemberDTO);
 
 	ContractMember get(Long id);
+	
+	ContractMember getByCCCD(String id);
 
 	List<ContractMemberDTO> getAll();
 

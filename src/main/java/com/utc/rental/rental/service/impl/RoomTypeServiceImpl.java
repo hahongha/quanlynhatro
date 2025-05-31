@@ -40,6 +40,7 @@ public class RoomTypeServiceImpl implements RoomTypeService {
 	public RoomTypeDTO create(RoomTypeDTO roomTypeDTO) {
 		ModelMapper mapper = new ModelMapper();
 		RoomType roomType = mapper.map(roomTypeDTO, RoomType.class);
+		roomTypeRepo.save(roomType);
 		return roomTypeDTO;
 		
 	}

@@ -70,7 +70,7 @@ public class AuthAPI {
 				LOG.error("Password wrong:"+ loginRequest.toString());
 				throw new UnauthorizedException("User not found");
 			}
-			
+			System.err.println(loginRequest.toString());
 			return authService.signin(loginRequest, user);
 
 		} catch (Exception e) {

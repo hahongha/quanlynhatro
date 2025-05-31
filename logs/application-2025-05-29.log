@@ -1,0 +1,504 @@
+2025-05-29 08:27:08 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-29 08:27:08 [main] INFO  c.u.rental.rental.RentalApplication - Starting RentalApplication using Java 17.0.12 with PID 31436 (D:\doan\rental\rental\target\classes started by phamh in D:\doan\rental\rental)
+2025-05-29 08:27:08 [main] INFO  c.u.rental.rental.RentalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-29 08:27:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29 08:27:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162 ms. Found 18 JPA repository interfaces.
+2025-05-29 08:27:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 5050 (http)
+2025-05-29 08:27:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5050"]
+2025-05-29 08:27:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-29 08:27:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-29 08:27:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-29 08:27:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5034 ms
+2025-05-29 08:27:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-29 08:27:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@120d6cbf
+2025-05-29 08:27:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-29 08:27:15 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29 08:27:15 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-05-29 08:27:15 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 08:27:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29 08:27:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 08:27:18 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-29 08:27:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29 08:27:20 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-29 08:27:21 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-05-29 08:27:23 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29 08:27:24 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-29 08:27:24 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-29 08:27:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5050"]
+2025-05-29 08:27:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 5050 (http) with context path '/'
+2025-05-29 08:27:25 [main] INFO  c.u.rental.rental.RentalApplication - Started RentalApplication in 17.762 seconds (process running for 18.437)
+2025-05-29 08:27:37 [http-nio-5050-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-29 08:27:37 [http-nio-5050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-29 08:27:37 [http-nio-5050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2025-05-29 08:27:37 [http-nio-5050-exec-2] ERROR c.u.r.r.s.s.JwtAuthenticationFilter - Could not set user authentication in security context
+com.utc.rental.rental.api.error.UnauthorizedException: Invalid JWT signature
+	at com.utc.rental.rental.security.securityv2.JwtTokenProvider.validateToken(JwtTokenProvider.java:105)
+	at com.utc.rental.rental.security.securityv2.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:46)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-05-29 08:27:37 [http-nio-5050-exec-2] ERROR c.u.r.r.s.s.JwtAuthenticationFilter - Could not set user authentication in security context
+com.utc.rental.rental.api.error.UnauthorizedException: Invalid JWT signature
+	at com.utc.rental.rental.security.securityv2.JwtTokenProvider.validateToken(JwtTokenProvider.java:105)
+	at com.utc.rental.rental.security.securityv2.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:46)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-05-29 08:27:43 [http-nio-5050-exec-4] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 08:27:43 [http-nio-5050-exec-4] INFO  c.u.r.rental.service.AuthService - User UserLogin(userName=an.nguyen, password=abcd456789) login at 2025-05-29T01:27:43.770041300Z
+2025-05-29 08:27:43 [http-nio-5050-exec-4] INFO  c.u.r.rental.service.AuthService - accessToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVMDAxIiwiaWF0IjoxNzQ4NDgyMDYzLCJleHAiOjE3NDg0ODU2NjMsImp0aSI6ImQ1MDEzMzdmLTRlZWUtNDQ5Ny1iOTZjLTZlOWJiZTJiYTQwNCJ9.3Qpq-u5mb2Q8LRG25JLbwIlKwLci6RRP1V7z1yLBWFMzUX9DVKL0baO0Nm2FgMOn7dVnkwoZFQT49MDN0El65Q
+2025-05-29 08:27:43 [http-nio-5050-exec-4] INFO  c.u.r.rental.service.AuthService - refreshToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbi5uZ3V5ZW4iLCJpYXQiOjE3NDg0ODIwNjMsImV4cCI6MTc0OTM0NjA2MywianRpIjoiNWVmODhhN2MtNjNmOS00YzRkLWFlOTItNTBlMDlmN2Q1ZDY0In0._i1kwvBWFAygFxP-QFeHcPEuGHaettlRS-qKj7H4PBBaI7tFYCzX54JE3IGqJs4KW3gxH9MvcSNtgdhOnwmW9A
+2025-05-29 08:27:43 [http-nio-5050-exec-7] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:27:43 [http-nio-5050-exec-7] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 08:27:43 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:27:43 [http-nio-5050-exec-5] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 08:27:44 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:27:44 [http-nio-5050-exec-8] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 08:27:46 [http-nio-5050-exec-9] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:35:18 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:35:18 [http-nio-5050-exec-3] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 08:35:18 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:35:42 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s445ms905µs900ns).
+2025-05-29 08:35:44 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:35:46 [http-nio-5050-exec-10] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:35:47 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:35:48 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:35:49 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:36:10 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:36:13 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:36:18 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:36:19 [http-nio-5050-exec-9] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:36:20 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 08:36:22 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 09:01:17 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:39:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-05-29 10:39:48 [main] INFO  c.u.rental.rental.RentalApplication - Starting RentalApplication using Java 17.0.12 with PID 3828 (D:\doan\rental\rental\target\classes started by phamh in D:\doan\rental\rental)
+2025-05-29 10:39:48 [main] INFO  c.u.rental.rental.RentalApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-29 10:39:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29 10:39:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 155 ms. Found 18 JPA repository interfaces.
+2025-05-29 10:39:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 5050 (http)
+2025-05-29 10:39:53 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5050"]
+2025-05-29 10:39:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-29 10:39:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-29 10:39:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-29 10:39:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5549 ms
+2025-05-29 10:39:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-29 10:39:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1115be8c
+2025-05-29 10:39:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-29 10:39:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29 10:39:56 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-05-29 10:39:56 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-29 10:39:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29 10:39:57 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29 10:39:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-29 10:39:59 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29 10:40:00 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-29 10:40:02 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-05-29 10:40:04 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29 10:40:05 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-05-29 10:40:06 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-29 10:40:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5050"]
+2025-05-29 10:40:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 5050 (http) with context path '/'
+2025-05-29 10:40:07 [main] INFO  c.u.rental.rental.RentalApplication - Started RentalApplication in 19.317 seconds (process running for 19.83)
+2025-05-29 10:40:23 [http-nio-5050-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-29 10:40:23 [http-nio-5050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-29 10:40:23 [http-nio-5050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-05-29 10:40:24 [http-nio-5050-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: about:blank{500, SERVER ERROR}] with root cause
+org.zalando.problem.DefaultProblem: SERVER ERROR
+	at org.zalando.problem.ProblemBuilder.build(ProblemBuilder.java:83)
+	at com.utc.rental.rental.api.rest.AuthAPI.getProfile(AuthAPI.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.utc.rental.rental.security.securityv2.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-05-29 10:40:28 [http-nio-5050-exec-3] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 10:40:29 [http-nio-5050-exec-3] INFO  c.u.r.rental.service.AuthService - User UserLogin(userName=an.nguyen, password=abcd456789) login at 2025-05-29T03:40:29.660930600Z
+2025-05-29 10:40:29 [http-nio-5050-exec-3] INFO  c.u.r.rental.service.AuthService - accessToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVMDAxIiwiaWF0IjoxNzQ4NDkwMDI5LCJleHAiOjE3NDg0OTM2MjksImp0aSI6IjQwNWIzY2Q0LTllMGItNGJkNS1iMmRjLTViMDM2MjAzYmIxZiJ9.dfGiTXaeQwX2_CWIYzvnXbJBscM2NxclHhttFPx5isq9hhfzG72p2Lr72dry40jgdkrot37nzrF0AcsS9Al5-Q
+2025-05-29 10:40:29 [http-nio-5050-exec-3] INFO  c.u.r.rental.service.AuthService - refreshToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbi5uZ3V5ZW4iLCJpYXQiOjE3NDg0OTAwMjksImV4cCI6MTc0OTM1NDAyOSwianRpIjoiZjk3YTYxNDQtMDBkYi00MDYxLTkwNzQtNmJhYzExZDkwYzVmIn0.Gfca0xuyR7jNfkjgLJYhmomWVtd8F541H4h9r40HqEfoctpRV9cK7U7oylOOH1ebNMkTgT7qfHdR5wBXb1qHAw
+2025-05-29 10:40:29 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:29 [http-nio-5050-exec-5] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 10:40:30 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:30 [http-nio-5050-exec-6] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 10:40:30 [http-nio-5050-exec-7] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:30 [http-nio-5050-exec-7] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:an.nguyen
+2025-05-29 10:40:31 [http-nio-5050-exec-9] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:41 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:42 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:45 [http-nio-5050-exec-4] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:46 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:40:57 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:00 [http-nio-5050-exec-10] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:05 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:10 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:10 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:10 [http-nio-5050-exec-6] INFO  c.u.r.r.s.impl.ContractServiceImpl - Get all Contract
+2025-05-29 10:41:13 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:14 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:14 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:17 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:17 [http-nio-5050-exec-7] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:17 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:17 [http-nio-5050-exec-7] INFO  c.u.r.r.s.i.Room_ServiceServiceImpl - Get all RoomService
+2025-05-29 10:41:20 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:20 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:20 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:20 [http-nio-5050-exec-1] INFO  c.u.r.r.s.impl.ContractServiceImpl - Get all Contract
+2025-05-29 10:41:22 [http-nio-5050-exec-7] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:41:24 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:42:11 [http-nio-5050-exec-9] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:42:14 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:42:14 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:43:21 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:43:34 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:43:43 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:02 [http-nio-5050-exec-4] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:12 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:12 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:12 [http-nio-5050-exec-6] INFO  c.u.r.r.s.impl.ContractServiceImpl - Get all Contract
+2025-05-29 10:44:34 [http-nio-5050-exec-4] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:34 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:34 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:34 [http-nio-5050-exec-4] INFO  c.u.r.r.s.i.Room_ServiceServiceImpl - Get all RoomService
+2025-05-29 10:44:35 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:35 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:35 [http-nio-5050-exec-9] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:44:35 [http-nio-5050-exec-6] INFO  c.u.r.r.s.impl.ContractServiceImpl - Get all Contract
+2025-05-29 10:45:18 [http-nio-5050-exec-10] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:45:26 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User U001 login
+2025-05-29 10:45:34 [http-nio-5050-exec-5] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:sandy.konopelski
+2025-05-29 10:45:34 [http-nio-5050-exec-5] INFO  c.u.r.rental.service.AuthService - User UserLogin(userName=sandy.konopelski, password=abcd456789) login at 2025-05-29T03:45:34.678949Z
+2025-05-29 10:45:34 [http-nio-5050-exec-5] INFO  c.u.r.rental.service.AuthService - accessToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYjIxOTM4ZjgzZGI0N2ZkOGIxNGZhYzA0NTE5NzA1MCIsImlhdCI6MTc0ODQ5MDMzNCwiZXhwIjoxNzQ4NDkzOTM0LCJqdGkiOiIxZGJjNDMyYS0wYmVhLTRkMDAtOWEwMy0zZjU0ZDRhOTliOGUifQ.WYmi_nkLU9kbQfmQaRiIENyBgC-WHL-hLqyO3cA3goYE9cGTUkXAuruV7AzKP0mhJDAZCM2wmG4Fb1WAtF6i1A
+2025-05-29 10:45:34 [http-nio-5050-exec-5] INFO  c.u.r.rental.service.AuthService - refreshToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW5keS5rb25vcGVsc2tpIiwiaWF0IjoxNzQ4NDkwMzM0LCJleHAiOjE3NDkzNTQzMzQsImp0aSI6IjgzOTI0ZGNhLTRhN2MtNGM3Yy1hNWM2LTRkZGE2NjA1MDVmNiJ9.OaHkLiZs5aoZolgUS1Zh4PNwrU0HUNvA8-p_88e8o090qQSgkeSWCm_bYgP8uaNhBRtLOFqPqUGMOCfkGmUbLw
+2025-05-29 10:45:34 [http-nio-5050-exec-9] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:34 [http-nio-5050-exec-9] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:sandy.konopelski
+2025-05-29 10:45:34 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:34 [http-nio-5050-exec-8] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:sandy.konopelski
+2025-05-29 10:45:34 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:34 [http-nio-5050-exec-6] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:sandy.konopelski
+2025-05-29 10:45:36 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:39 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:39 [http-nio-5050-exec-9] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:40 [http-nio-5050-exec-6] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:42 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:42 [http-nio-5050-exec-10] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:45:46 [http-nio-5050-exec-3] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:46:00 [http-nio-5050-exec-5] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User cb21938f83db47fd8b14fac045197050 login
+2025-05-29 10:47:27 [http-nio-5050-exec-8] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:emmitt.kshlerin
+2025-05-29 10:47:27 [http-nio-5050-exec-8] INFO  c.u.r.rental.service.AuthService - User UserLogin(userName=emmitt.kshlerin, password=abcd456789) login at 2025-05-29T03:47:27.704022600Z
+2025-05-29 10:47:27 [http-nio-5050-exec-8] INFO  c.u.r.rental.service.AuthService - accessToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMzNmZWUwNTdmN2E0MjJiOWNkM2ZmYjEwMTkzNDQzMCIsImlhdCI6MTc0ODQ5MDQ0NywiZXhwIjoxNzQ4NDk0MDQ3LCJqdGkiOiI3MGJhMGQ2My05MGVmLTQ4YzktODMyOS1iNjczM2JhMTdjNGMifQ.nk0NOgICS_2qyMCOiieD2CzHPsNaX_oV4Y9cOodW5aB6xKZHktbiva8z6M2ibAK9_YQRoOsl9QUNVo7aAU3xHA
+2025-05-29 10:47:27 [http-nio-5050-exec-8] INFO  c.u.r.rental.service.AuthService - refreshToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbW1pdHQua3NobGVyaW4iLCJpYXQiOjE3NDg0OTA0NDcsImV4cCI6MTc0OTM1NDQ0NywianRpIjoiZDA5ZWI5ZmUtZGRmMS00MjcxLTkwZjgtZjFjYzI0MTNhYzYzIn0.KvjvLDvpH4EKUD4omreiNuz3wh2_9Huy_ifL9px1inCyagoTxcrFF9y5UeMfkTq2tnCbuRTumeRQBVNVVPurWA
+2025-05-29 10:47:27 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User 033fee057f7a422b9cd3ffb101934430 login
+2025-05-29 10:47:27 [http-nio-5050-exec-2] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:emmitt.kshlerin
+2025-05-29 10:47:27 [http-nio-5050-exec-10] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User 033fee057f7a422b9cd3ffb101934430 login
+2025-05-29 10:47:27 [http-nio-5050-exec-10] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:emmitt.kshlerin
+2025-05-29 10:47:27 [http-nio-5050-exec-4] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User 033fee057f7a422b9cd3ffb101934430 login
+2025-05-29 10:47:27 [http-nio-5050-exec-4] INFO  c.u.r.r.service.impl.UserServiceImpl - Found user by userName:emmitt.kshlerin
+2025-05-29 10:47:29 [http-nio-5050-exec-1] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User 033fee057f7a422b9cd3ffb101934430 login
+2025-05-29 10:47:36 [http-nio-5050-exec-7] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User 033fee057f7a422b9cd3ffb101934430 login
+2025-05-29 10:47:41 [http-nio-5050-exec-8] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User 033fee057f7a422b9cd3ffb101934430 login
+2025-05-29 10:47:49 [http-nio-5050-exec-2] INFO  c.u.r.r.s.s.JwtAuthenticationFilter - User 033fee057f7a422b9cd3ffb101934430 login

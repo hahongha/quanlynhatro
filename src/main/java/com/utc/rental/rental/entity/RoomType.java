@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.utc.rental.rental.config.StringListConverter;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,5 +37,6 @@ public class RoomType extends BaseModel {
 	
 	//các hình ảnh mẫu
 	@Convert(converter = StringListConverter.class)
+    @Column(columnDefinition = "TEXT")
 	List<String> imageList = new ArrayList<String>();
 }

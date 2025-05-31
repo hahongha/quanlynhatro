@@ -17,9 +17,6 @@ public class BillType {
 
     @Column(nullable = false, unique = true)
     private String name; // Ví dụ: Tiền phòng, Tiền điện...
-//
-//    @OneToMany(mappedBy = "billType")
-//    private List<BillDetail> billDetails;
     
     //là thu hay chi nếu là thu thì trả về true còn đâu trả về false
     @Column(name = "is_expense", nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")

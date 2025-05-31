@@ -52,6 +52,8 @@ public class Bill extends BaseModel {
 	
 	String note;
 	
+	private boolean isExpense;
+	
 	@ManyToOne(fetch = FetchType.LAZY, optional = true)
 	@JoinColumn(name = "room_id", nullable = true)
     private Room room;

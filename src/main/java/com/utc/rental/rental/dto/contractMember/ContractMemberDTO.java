@@ -54,8 +54,6 @@ public class ContractMemberDTO {
 	String identification;
 	
 	String rentalRelationship;
-
-	ContractResponseDTO contractResponseDTO;
 	
 	String imageUrl;
 

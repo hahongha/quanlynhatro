@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class SearchRoomService {
+public class SearchServiceRoom {
 	SearchDTO searchDTO;
 	
 	private Long roomId;

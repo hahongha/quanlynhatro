@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import com.utc.rental.rental.config.Constants;
 import com.utc.rental.rental.dto.contract.ContractResponseDTO;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -58,14 +59,11 @@ public class ContractMember extends BaseModel {
 	Boolean isRegister;
 
 	// cccd
+	@Column(unique = true, nullable = false)
 	String identification;
 	
 	String rentalRelationship;
 	
 	String imageUrl;
-
-	// ràng buộc với hợp đồng nào
-	@ManyToOne(fetch = FetchType.LAZY)
-	Contractt contract;
 
 }

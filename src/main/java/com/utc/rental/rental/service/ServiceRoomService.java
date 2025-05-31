@@ -5,7 +5,7 @@ import java.util.List;
 import com.utc.rental.rental.dto.response.ResponseDTO;
 import com.utc.rental.rental.dto.room_service.RoomServiceDTO;
 import com.utc.rental.rental.dto.search.SearchDTO;
-import com.utc.rental.rental.dto.search.SearchRoomService;
+import com.utc.rental.rental.dto.search.SearchServiceRoom;
 import com.utc.rental.rental.entity.Room_Service;
 
 public interface ServiceRoomService {
@@ -21,7 +21,7 @@ public interface ServiceRoomService {
 	
 	List<RoomServiceDTO> getAll();
 	
-	ResponseDTO<List<RoomServiceDTO>> search(SearchRoomService searchRoomService);
+	ResponseDTO<List<RoomServiceDTO>> search(SearchServiceRoom searchRoomService);
 	
 	Long count();
 }

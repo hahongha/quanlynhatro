@@ -52,15 +52,15 @@ public class ContractMemberServiceImpl implements ContractMemberService {
     public ContractMemberDTO create(ContractMemberDTO contractMemberDTO) {
         LOG.info("Create ContractMember: " + contractMemberDTO.toString());
 
-        ModelMapper mapper = new ModelMapper();
-
-        ContractMember contractMember = mapper.map(contractMemberDTO, ContractMember.class);
-        if(contractMemberDTO.getContractResponseDTO()!=null) {
-        Contractt contract = contractRepo.findById(contractMemberDTO.getContractResponseDTO().getId())
-        		.orElseThrow(()-> new BadRequestAlertException("Not Found Contract", "Contract", "Not Found"));     
-        contractMember.setContract(contract);
-        }
-        contractMemberRepo.save(contractMember);
+//        ModelMapper mapper = new ModelMapper();
+//
+//        ContractMember contractMember = mapper.map(contractMemberDTO, ContractMember.class);
+////        if(contractMemberDTO.getContractResponseDTO()!=null) {
+////        Contractt contract = contractRepo.findById(contractMemberDTO.getContractResponseDTO().getId())
+////        		.orElseThrow(()-> new BadRequestAlertException("Not Found Contract", "Contract", "Not Found"));     
+////        contractMember.setContract(contract);
+//        }
+//        contractMemberRepo.save(contractMember);
         return contractMemberDTO;
     }
 
@@ -88,10 +88,10 @@ public class ContractMemberServiceImpl implements ContractMemberService {
         if(!contractMemberRepo.existsById(contractMemberDTO.getId()))
         	throw new BadRequestAlertException("Not Found ContractMember", "ContractMember", "NotFound");
         ContractMember contractMember2 = mapper.map(contractMemberDTO, ContractMember.class);
-        Contractt contract = contractRepo.findById(contractMemberDTO.getContractResponseDTO().getId())
-        		.orElseThrow(()-> new BadRequestAlertException("Not Found Contract", "Contract", "Not Found"));   
+//        Contractt contract = contractRepo.findById(contractMemberDTO.getContractResponseDTO().getId())
+//        		.orElseThrow(()-> new BadRequestAlertException("Not Found Contract", "Contract", "Not Found"));   
         
-        contractMember2.setContract(contract);
+//        contractMember2.setContract(contract);
         
         contractMemberRepo.save(contractMember2);
 
@@ -121,8 +121,8 @@ public class ContractMemberServiceImpl implements ContractMemberService {
         ModelMapper modelMapper = new ModelMapper();
         for (ContractMember contractMember : authorities) {
 			ContractMemberDTO contractMemberDTO = mapper.map(contractMember, ContractMemberDTO.class);
-			ContractResponseDTO contractResponseDTO = modelMapper.map(contractMember.getContract(), ContractResponseDTO.class);
-			contractMemberDTO.setContractResponseDTO(contractResponseDTO);
+//			ContractResponseDTO contractResponseDTO = modelMapper.map(contractMember.getContract(), ContractResponseDTO.class);
+//			contractMemberDTO.setContractResponseDTO(contractResponseDTO);
 			contractDTOs.add(contractMemberDTO);
 		}
         return contractDTOs;
@@ -146,8 +146,8 @@ public class ContractMemberServiceImpl implements ContractMemberService {
             List<ContractMemberDTO> contractDTOs = new ArrayList<ContractMemberDTO>();
             for (ContractMember contractMember : page.getContent()) {
     			ContractMemberDTO contractMemberDTO = mapper.map(contractMember, ContractMemberDTO.class);
-    			ContractResponseDTO contractResponseDTO = modelMapper.map(contractMember.getContract(), ContractResponseDTO.class);
-    			contractMemberDTO.setContractResponseDTO(contractResponseDTO);
+//    			ContractResponseDTO contractResponseDTO = modelMapper.map(contractMember.getContract(), ContractResponseDTO.class);
+//    			contractMemberDTO.setContractResponseDTO(contractResponseDTO);
     			contractDTOs.add(contractMemberDTO);
     		}
             ResponseDTO<List<ContractMemberDTO>> responseDTO = mapper.map(page, ResponseDTO.class);
@@ -168,18 +168,24 @@ public class ContractMemberServiceImpl implements ContractMemberService {
 
 	@Override
 	public List<ContractMemberDTO> getContractMemberFromContract(String id) {
-		ModelMapper mapper = new ModelMapper();
-        ModelMapper modelMapper = new ModelMapper();
-        List<ContractMemberDTO> contractDTOs = new ArrayList<ContractMemberDTO>();
-		Contractt contractt = contractRepo.findById(id).orElseThrow(()-> new BadRequestAlertException("Not Found Contract", "CONTRACTMEMBER", "NotFound"));
-		List<ContractMember> contractMembers = contractMemberRepo.findByContractStatus(id, StatusActRef.ACTIVE.toString());
-		 for (ContractMember contractMember : contractMembers) {
- 			ContractMemberDTO contractMemberDTO = mapper.map(contractMember, ContractMemberDTO.class);
- 			ContractResponseDTO contractResponseDTO = modelMapper.map(contractMember.getContract(), ContractResponseDTO.class);
- 			contractMemberDTO.setContractResponseDTO(contractResponseDTO);
+//		ModelMapper mapper = new ModelMapper();
+//        ModelMapper modelMapper = new ModelMapper();
+//        List<ContractMemberDTO> contractDTOs = new ArrayList<ContractMemberDTO>();
+//		Contractt contractt = contractRepo.findById(id).orElseThrow(()-> new BadRequestAlertException("Not Found Contract", "CONTRACTMEMBER", "NotFound"));
+//		List<ContractMember> contractMembers = contractMemberRepo.findByContractStatus(id, StatusActRef.ACTIVE.toString());
+//		 for (ContractMember contractMember : contractMembers) {
+// 			ContractMemberDTO contractMemberDTO = mapper.map(contractMember, ContractMemberDTO.class);
+// 			ContractResponseDTO contractResponseDTO = modelMapper.map(contractMember.getContract(), ContractResponseDTO.class);
+// 			contractMemberDTO.setContractResponseDTO(contractResponseDTO);
 // 			System.err.println(contractResponseDTO.toString());
- 			contractDTOs.add(contractMemberDTO);
- 		}
-		return contractDTOs;
+// 			contractDTOs.add(contractMemberDTO);
+// 		}
+//		return contractDTOs;
+		return null;
+	}
+
+	@Override
+	public ContractMember getByCCCD(String id) {
+		return contractMemberRepo.findByIdentification(id).orElseThrow(()-> new BadRequestAlertException("Không tìm thấy", id, "Not Found"));
 	}
 }

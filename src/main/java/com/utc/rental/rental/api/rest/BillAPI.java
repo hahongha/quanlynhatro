@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.utc.rental.rental.api.error.BadRequestAlertException;
 import com.utc.rental.rental.dto.bill.BillDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.roomReturn.RoomReturnDTO;
 import com.utc.rental.rental.dto.search.SearchBill;
 
 import jakarta.validation.Valid;
@@ -61,6 +62,11 @@ public class BillAPI {
 	@PostMapping("/search")
     public ResponseDTO<List<BillDTO>> search(@RequestBody SearchBill searchDTO) {
         return BillService.search(searchDTO);
+    }
+	
+	@PostMapping("/createBillRefund")
+    public ResponseDTO<BillDTO> createBillRefund(@RequestBody RoomReturnDTO roomReturnDTO) {
+		return ResponseDTO.<BillDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(BillService.createREFUND(roomReturnDTO)).build();
     }
 	
 	@GetMapping("/{id}")

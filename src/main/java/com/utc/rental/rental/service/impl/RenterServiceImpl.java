@@ -74,7 +74,14 @@ public class RenterServiceImpl implements RenterService {
 			renterDTO.setId(UUID.randomUUID().toString().replace("_", ""));
 		ModelMapper mapper = new ModelMapper();
 		try {
-			UserDTO userDTO = userService.create(renterDTO.getUser());
+			UserDTO userDTO = renterDTO.getUser();
+			if(renterDTO.getStatus().equals(StatusActRef.ACTIVE.toString())) {
+				userDTO.setStatus(StatusActRef.ACTIVE.toString());
+			}else {
+				userDTO.setStatus(StatusActRef.INACTIVE.toString());
+			}
+			
+			userService.create(userDTO);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -93,6 +100,11 @@ public class RenterServiceImpl implements RenterService {
 		ModelMapper mapper = new ModelMapper();
 		Renter renter = mapper.map(renterDTO, Renter.class);
 		UserDTO user = renterDTO.getUser();
+		if(renterDTO.getStatus().equals(StatusActRef.ACTIVE.toString())) {
+			user.setStatus(StatusActRef.ACTIVE.toString());
+		}else {
+			user.setStatus(StatusActRef.INACTIVE.toString());
+		}
 		userService.update(user);
 		renterRepo.save(renter);
 		return renterDTO;

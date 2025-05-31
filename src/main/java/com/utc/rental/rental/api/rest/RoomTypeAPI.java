@@ -52,8 +52,8 @@ public class RoomTypeAPI {
 			List<String> images = cloudinaryService.uploadMultipartFile(files, "ROOM_TYPES/"+ roomTypeDTO.getName());
 			if(images!= null && images.size()>0)
 				roomTypeDTO.getImageList().addAll(images);
-//			else roomTypeDTO.setImageList(images);
 		}
+		roomTypeService.create(roomTypeDTO);
 		return ResponseDTO.<RoomTypeDTO>builder().code(String.valueOf(HttpStatus.OK.value())).data(roomTypeDTO).build();
 	}
 	

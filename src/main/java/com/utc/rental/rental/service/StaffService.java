@@ -2,6 +2,8 @@ package com.utc.rental.rental.service;
 
 import java.util.List;
 
+import com.utc.rental.rental.dto.response.ResponseDTO;
+import com.utc.rental.rental.dto.search.SearchStaff;
 import com.utc.rental.rental.dto.staff.StaffDTO;
 
 public interface StaffService {
@@ -14,7 +16,7 @@ public interface StaffService {
 	StaffDTO get(String id);
 	
 	List<StaffDTO> getAll();
-	
+	ResponseDTO<List<StaffDTO>> search(SearchStaff searchStaff);
 	
 	Long count();
 	

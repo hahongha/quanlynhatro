@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -59,8 +60,8 @@ public class ContractServiceImpl implements ContractService {
 		
 		Room room = roomService.get(contractDTO.getRoom().getId());
 		contract.setRoom(room);
+		contract.setId(UUID.randomUUID().toString().replace("-", ""));
 		contractRepo.save(contract);
-		System.err.println(contractDTO.toString());
 		return contractDTO;
 	}
 

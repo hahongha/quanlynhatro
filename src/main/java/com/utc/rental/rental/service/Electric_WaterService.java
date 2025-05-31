@@ -19,5 +19,5 @@ public interface Electric_WaterService {
 	
 	List<Electric_WaterDTO> getAll();
 	
-	ResponseDTO<List<Electric_WaterDTO>> search(SearchDTO searchDTO);
+	ResponseDTO<List<Electric_WaterDTO>> search(SearchEW searchEW);
 }

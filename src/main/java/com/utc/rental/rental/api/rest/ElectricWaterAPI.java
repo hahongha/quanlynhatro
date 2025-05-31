@@ -21,6 +21,7 @@ import com.utc.rental.rental.api.error.BadRequestAlertException;
 import com.utc.rental.rental.dto.index.Electric_WaterDTO;
 import com.utc.rental.rental.dto.response.ResponseDTO;
 import com.utc.rental.rental.dto.search.SearchDTO;
+import com.utc.rental.rental.dto.search.SearchEW;
 import com.utc.rental.rental.entity.Electric_Water;
 import com.utc.rental.rental.service.CloudinaryService;
 import com.utc.rental.rental.service.Electric_WaterService;
@@ -36,8 +37,8 @@ public class ElectricWaterAPI {
 	private static final String ENTITY_NAME = "Electric_Water";
 
 	@PostMapping("/search")
-	public ResponseDTO<List<Electric_WaterDTO>> search(@RequestBody @Valid SearchDTO searchElectric_WaterDTO) {
-		return electric_WaterService.search(searchElectric_WaterDTO);
+	public ResponseDTO<List<Electric_WaterDTO>> search(@RequestBody @Valid SearchEW searchEW) {
+		return electric_WaterService.search(searchEW);
 	}
 
 	@PostMapping("")

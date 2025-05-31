@@ -22,9 +22,11 @@ import com.utc.rental.rental.dto.response.ResponseDTO;
 import com.utc.rental.rental.dto.roomReturn.RoomReturnDTO;
 import com.utc.rental.rental.dto.search.SearchDTO;
 import com.utc.rental.rental.dto.search.SearchRoomReturn;
+import com.utc.rental.rental.entity.Bill;
 import com.utc.rental.rental.entity.Contractt;
 import com.utc.rental.rental.entity.Room;
 import com.utc.rental.rental.entity.RoomReturnHistory;
+import com.utc.rental.rental.repository.BillRepo;
 import com.utc.rental.rental.repository.ContractRepo;
 import com.utc.rental.rental.repository.RoomRepo;
 import com.utc.rental.rental.repository.RoomReturnHistoryRepo;
@@ -50,7 +52,8 @@ public class RoomReturnHistoryServiceImpl implements RoomReturnHistoryService {
 	@Autowired
 	private ContractRepo contractRepo;
 	
-	
+	@Autowired
+	private BillRepo billRepo;
 	
 	private static final Logger LOG = LoggerFactory.getLogger(RoomReturnHistoryServiceImpl.class);
 	
@@ -65,19 +68,16 @@ public class RoomReturnHistoryServiceImpl implements RoomReturnHistoryService {
 		
 		RoomReturnHistory roomReturnHistory = new RoomReturnHistory();
 		roomReturnHistory.setId(UUID.randomUUID().toString().replace("-", ""));
-		roomReturnHistory.setId(roomReturnDTO.getId());
 		roomReturnHistory.setUpdateAt(LocalDate.now());
 		roomReturnHistory.setReturnDate(roomReturnDTO.getReturnDate());
 		roomReturnHistory.setNote(roomReturnDTO.getNote());
 		roomReturnHistory.setReason(roomReturnDTO.getReason());
 		roomReturnHistory.setStatus(roomReturnDTO.getStatus());
-//		
 		Contractt contractt = contractRepo.findById(roomReturnDTO.getContractId()).orElseThrow();
-//		
 		Room room = contractt.getRoom();
 		roomReturnHistory.setRoom(room);
 		roomReturnHistory.setContract(contractt);
-//		
+		
 		roomReturnHistoryRepo.save(roomReturnHistory);
 		
 		return roomReturnDTO;
